@@ -1,47 +1,39 @@
 //QUESTION:1
 //USING FOR LOOP:
-var request = new XMLHttpRequest();
-request.open("GET", "https://restcountries.com/v3.1/all", true);
-request.send();
-request.onload = function () {
-  var data = request.response;
-  //console.log(data);
-  var result = JSON.parse(data);
-  console.log(result);
-  for (var i = 0; i < result.length; i++) {
-    console.log(result[i].area);
+var request1 = new XMLHttpRequest();
+request1.open("GET", "https://restcountries.com/v3.1/all", true);
+request1.send();
+request1.onload = function () {
+  var data1 = request1.response;
+  var result1 = JSON.parse(data1);
+  console.log(result1);
+  for (var i = 0; i < result1.length; i++) {
+    console.log(result1[i].area);
   }
 }
 
   //-----------------------------------------------------------
   //FOR IN METHOD:
-var request = new XMLHttpRequest();
-request.open("GET", "https://restcountries.com/v3.1/all", true);
-request.send();
-request.onload = function () {
-  var data = request.response;
-  //console.log(data);
-  var result = JSON.parse(data);
-  console.log(result);
-  //for accessing multiple values use looping
-  //!using for loop
-  for (let intex in result){
-    console.log(result[intex].region)
+var request2 = new XMLHttpRequest();
+request2.open("GET", "https://restcountries.com/v3.1/all", true);
+request2.send();
+request2.onload = function () {
+  var data2 = request2.response;
+  var result2 = JSON.parse(data2);
+  for (let intex in result2){
+    console.log(result2[intex].region)
   }
 }
 
 //----------------------------------------------------------------
 //FOR OF METHOD:
-var request = new XMLHttpRequest();
-request.open("GET", "https://restcountries.com/v3.1/all", true);
-request.send();
-request.onload = function () {
-  var data = request.response;
-  //console.log(data);
-  var result = JSON.parse(data);
-  console.log(result);
-  //!using for loop
-  for (let values in result){
+var request3 = new XMLHttpRequest();
+request3.open("GET", "https://restcountries.com/v3.1/all", true);
+request3.send();
+request3.onload = function () {
+  var data4 = request.response;
+  var result3= JSON.parse(data4);
+  for (let values of result3){
     console.log(values.subregion,values.population)
   }
 }
