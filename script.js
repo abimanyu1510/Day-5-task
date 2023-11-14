@@ -6,7 +6,6 @@ request1.send();
 request1.onload = function () {
   var data1 = request1.response;
   var result1 = JSON.parse(data1);
-  console.log(result1);
   for (var i = 0; i < result1.length; i++) {
     console.log(result1[i].area);
   }
@@ -31,22 +30,20 @@ var request3 = new XMLHttpRequest();
 request3.open("GET", "https://restcountries.com/v3.1/all", true);
 request3.send();
 request3.onload = function () {
-  var data4 = request.response;
-  var result3= JSON.parse(data4);
-  for (let values of result3){
+  var data4 = request3.response;
+  var result4= JSON.parse(data4);
+  for (let values of result4){
     console.log(values.subregion,values.population)
   }
 }
 //---------------------------------------------------
 //FOR EACH :
-var request = new XMLHttpRequest();
-request.open("GET", "https://restcountries.com/v3.1/all", true);
-request.send();
-request.onload = function () {
-  var data = request.response;
-  //console.log(data);
-  var result = JSON.parse(data);
-  console.log(result);
+var request5 = new XMLHttpRequest();
+request5.open("GET", "https://restcountries.com/v3.1/all", true);
+request5.send();
+request5.onload = function () {
+  var data5 = request5.response;
+  var result = JSON.parse(data5);
   var each=result.forEach((x)=>console.log(x.area))
 }
 
